@@ -1,0 +1,68 @@
+# Unity cache and build folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+
+# User-specific settings
+UserSettings/
+
+# Memory and log files
+MemoryCaptures/
+Logs/
+
+# Asset store tools and PlasticSCM caches
+**/Assets/AssetStoreTools/
+**/Assets/Plugins/PlasticSCM*
+
+# Temporary and cache files
+*.tmp
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# OS files
+.DS_Store*
+Thumbs.db
+Desktop.ini
+
+# IDE and editor folders
+.vs/
+.vscode/
+.idea/
+.gradle/
+.consulo/
+
+# Unity project files (auto-generated)
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# Build output binaries
+*.apk
+*.aab
+*.app
+*.unitypackage
+
+# Miscellaneous
+~UnityDirMonSyncFile~*
+sysinfo.txt
+crashlytics-build.properties
+
+# Addressable assets cache
+**/Assets/AddressableAssetsData/*/*.bin*
+**/Assets/StreamingAssets/aa.meta
+**/assets/addressableassetsdata/*/*.bin*
+**/assets/streamingassets/*/aa/*
+
