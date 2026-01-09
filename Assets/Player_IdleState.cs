@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class Player_IdleState : EntityState
 {
     public Player_IdleState(Player player, StateMachine stateMachine, string stateName) : base(player, stateMachine, stateName)
@@ -11,7 +9,7 @@ public class Player_IdleState : EntityState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (player.moveInput.x != 0)
             stateMachine.ChangeState(player.moveState);
     }
 }
