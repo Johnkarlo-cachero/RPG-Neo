@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     private PlayerInputSet input;
     private StateMachine stateMachine;
+    private bool facingRight = true;
 
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
@@ -54,5 +55,21 @@ public class Player : MonoBehaviour
     public void SetVelocity(float xVelocity, float yVelocity)
     {
         rb.linearVelocity = new Vector2(xVelocity, yVelocity);
+        HandleFlip(xVelocity);
+    }
+
+    private void HandleFlip(float xVelocity)
+    {
+        // If moving right and not facing right, flip
+        if (xVelocity > 0 && !facingRight)
+            Flip();
+        else if (xVelocity < 0 && facingRight)
+            Flip();
+    }
+
+    private void Flip()
+    {
+        transform.Rotate(0, 180, 0);
+        facingRight = !facingRight;
     }
 }
