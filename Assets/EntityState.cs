@@ -9,30 +9,34 @@ public abstract class EntityState
 {
     protected Player player;
     protected StateMachine stateMachine;
-    protected string stateName;
+    protected string animBoolName;
 
-    public EntityState(Player player, StateMachine stateMachine, string stateName)
+    protected Animator anim;
+    protected Rigidbody2D rb;
+
+    public EntityState(Player player, StateMachine stateMachine, string animBoolName)
     {
         this.player = player;
         this.stateMachine = stateMachine;
-        this.stateName = stateName;
+        this.animBoolName = animBoolName;
+
+        anim = player.anim;
+        rb = player.rb;
     }
 
     public virtual void Enter()
     {
-        // everytime state will be changed, Enter will be called
-        Debug.Log("Entering " + stateName);
+        anim.SetBool(animBoolName, true);
     }
 
     public virtual void Update()
     {
         // we are going to run logic of the state through Player here
-        Debug.Log("Updating " + stateName);
+        Debug.Log("Updating " + animBoolName);
     }
 
     public virtual void Exit()
     {
-        // This will be called, everytime we exit state and change to a new one
-        Debug.Log("Exiting " + stateName);
+        anim.SetBool(animBoolName, false);
     }
 }
