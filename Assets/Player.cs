@@ -20,10 +20,13 @@ public class Player : MonoBehaviour
     public Vector2 moveInput { get; private set; }
     private bool facingRight = true;
 
+    [Range(0, 1)]
+    public float inAirMoveMultiplier = 0.7f;
+
     [Header("Collision detection")]
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask whatIsGround;
-    public bool groundDetected;
+    public bool groundDetected { get; private set; }
 
     private void Awake()
     {
