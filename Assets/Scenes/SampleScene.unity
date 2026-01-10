@@ -980,7 +980,7 @@ Transform:
   m_GameObject: {fileID: 874206264}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.84, y: -4.87, z: 0.005123389}
+  m_LocalPosition: {x: 10.69, y: -4.76, z: 0.005123389}
   m_LocalScale: {x: 1.929, y: 2.5704005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1555,7 +1555,7 @@ Transform:
   m_GameObject: {fileID: 1844745622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4456172, y: -4.5527, z: 0.005123389}
+  m_LocalPosition: {x: 0.56, y: -4.59, z: 0.005123389}
   m_LocalScale: {x: 1.929, y: 1.5140816, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1594,6 +1594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   jumpForce: 12
+  wallJumpForce: {x: 6, y: 12}
   inAirMoveMultiplier: 0.7
   wallSlideSlowMultiplier: 0.4
   groundCheckDistance: 1.34
@@ -1632,7 +1633,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0.1
   m_AngularDamping: 0.05
-  m_GravityScale: 3.5
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: 6c7eb4a3e88ba4f03861ac868e333591, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
